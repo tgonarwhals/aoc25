@@ -35,6 +35,7 @@ def parttwo():
             num = int(line[1:])
 
         #i saw something online and i want to try literally just brute forcing it lmfao
+        #AHAHAHAHAHAHAAHASHAHH
         while (num != 0):
             if (num < 0):
                 dial -= 1
