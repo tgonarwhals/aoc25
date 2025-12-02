@@ -34,16 +34,21 @@ def parttwo():
         else:
             num = int(line[1:])
 
-        #spin the dial
-        dial += num
-
-        #correct back down to range 0-99, counting every 0 we pass along the way
-        while (dial < 0):
-            dial += 100
-            count += 1
-        while (dial >= 100):
-            dial -= 100
-            count += 1
+        #i saw something online and i want to try literally just brute forcing it lmfao
+        while (num != 0):
+            if (num < 0):
+                dial -= 1
+                num += 1
+            if (num > 0):
+                dial += 1
+                num -= 1
+            if (dial < 0):
+                dial += 100
+            elif (dial >= 100):
+                dial -= 100
+            if (dial == 0):
+                count += 1
+            
         
         print(str(i) + ": " + line[:-1] + " -> " + str(dial) + " | " + str(count))
         
